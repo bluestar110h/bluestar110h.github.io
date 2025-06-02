@@ -223,7 +223,7 @@
 					</div>
 				</div>
 			</div>
-				<div class="row g-3" style="margin-top: 60px;">
+				<div class="row service-row" style="margin-top: 60px;">
 				<div class="col-lg-6">
 						<div class="service-card-v2 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
 							<h2 class="service-card-num"><span>01</span>سبد خلاقیت</h2>
@@ -589,5 +589,31 @@
 		<script src="assets/js/vendor/backtop.js"></script>
 		<script src="assets/js/plugins/text-type.js"></script>
 		<script src="assets/js/main.js"></script> 
+<style>
+  .service-card-user-image::before,
+  .service-card-user-image::after {
+    content: none !important;
+  }
+  .service-card-user-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .service-card-user-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+  }
+  .row.service-row {
+    align-items: center;
+  }
+</style>
 	</body>
 </html>
