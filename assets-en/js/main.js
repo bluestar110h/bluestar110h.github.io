@@ -61,7 +61,7 @@
       tmPk.odoMeter();
       tmPk.tiltAnimation();
       // tmPk.titleSplit_2();
-      tmPk.rtlJs();
+      // tmPk.rtlJs();
     },
 
     serviceWidget: function () {
