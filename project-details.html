@@ -33,7 +33,7 @@
 
     .my-gallery-section h1 {
       color: #e50914;
-      margin-bottom: 40px;
+      margin: 80px 0 40px 0;
       font-size: 32px;
     }
 
@@ -66,8 +66,8 @@
     }
 
     .vertical img {
-      max-height: 500px;
-      object-fit: contain;
+      height: 500px;
+      object-fit: cover;
       background-color: #111;
     }
 
@@ -115,8 +115,7 @@
   </style>
 </head>
 <body class="color-primary-2nd">
-
-  <!-- Header -->
+<!-- Header -->
   <header class="tmp-header-area-start header-one header--sticky header--transparent">
     <div class="container">
       <div class="row">
@@ -164,8 +163,6 @@
 
   <!-- گالری -->
   <section class="my-gallery-section">
-    
-    
     <h1>تصاویر من</h1>
 
     <h2>عکس‌های افقی</h2>
@@ -208,7 +205,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const images = document.querySelectorAll('.gallery img');
     const close = document.querySelector('.close');
-
+    
     images.forEach(img => {
       img.addEventListener('click', () => {
         lightbox.style.display = 'block';
