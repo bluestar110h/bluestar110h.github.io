@@ -1,535 +1,185 @@
 <!DOCTYPE html>
 <html lang="fa" dir="ltr">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <meta content="Reeni is a modern personal portfolio template for designers, developers, and freelancers. Fully responsive, SEO-friendly, and easy to customize." name="description"/>
-    <link href="assets/images/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
-    <title>صفحه اصلی 03 Reeni - نمونه کارها شخصی HTML الگوی |نمونه کارها فریلنسر و توسعه دهنده</title>
-    <link href="assets/css/vendor/fontawesome.css" rel="stylesheet"/>
-    <link href="assets/css/plugins/swiper.css" rel="stylesheet"/>
-    <link href="assets/css/plugins/odometer.css" rel="stylesheet"/>
-    <link href="assets/css/vendor/animate.min.css" rel="stylesheet"/>
-    <link href="assets/css/vendor/bootstrap.min.css" rel="stylesheet"/>
-    <link href="assets/css/style.css" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سایت نمونه</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             direction: ltr;
             text-align: left;
+            margin: 20px;
+            background-color: #f9f9f9;
         }
-        .header-content {
-            flex-direction: row-reverse;
-        }
-        .tmp-mainmenu {
-            justify-content: flex-end;
-        }
-        .tmp-header-right {
-            margin-left: auto;
-            margin-right: 0;
-        }
-        .banner-three-main-wrapper .row,
-        .service-row,
-        .footer-main .row,
-        .education-experience .row,
-        .counter-area .row {
-            flex-direction: row-reverse;
-        }
-        .tmp-btn .icon-reverse-wrapper {
-            flex-direction: row-reverse;
-        }
-        .tmp-arrow-icon-btn {
-            transform: rotate(180deg);
-        }
-        .progress-wrapper .content {
+        header, footer {
+            background-color: #222;
+            color: white;
+            padding: 10px 20px;
             text-align: left;
         }
-        .single-footer-wrapper.contact-wrap {
+        nav {
+            margin: 15px 0;
+            background-color: #eee;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #ddd;
+            padding: 15px;
+            min-width: 200px;
+        }
+        .main-content {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            min-width: 400px;
+        }
+        /* For tables with columns, swap order if needed */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #999;
+        }
+        th, td {
+            padding: 8px 12px;
             text-align: left;
         }
-        .service-card-user-image {
-            margin-left: 0;
-            margin-right: auto;
-        }
-        .latest-portfolio-card .portfolio-card-content-wrap {
-            flex-direction: row;
+        /* Specific class to keep Persian text RTL inside cells */
+        .rtl-text {
+            direction: rtl;
+            unicode-bidi: embed;
         }
     </style>
 </head>
-<body class="color-primary-2nd">
-    <header class="tmp-header-area-start header-one header--sticky header--transparent">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="header-content">
-                        <div class="logo"> <a href="index.html"> <img alt="Reeni - Personal Portfolio HTML Template for developers and freelancers" class="logo-dark" src="assets/images/logo/white-logo-reeni-2.png"/> <img alt="Reeni - Personal Portfolio HTML Template for developers and freelancers" class="logo-white" src="assets/images/logo/logo-white.png"/> </a> </div>
-                        <nav class="tmp-mainmenu-nav d-none d-xl-block">
-                            <ul class="tmp-mainmenu">
-                                <li><a href="index-en.html">English</a></li>
-                                <li> <a href="index.html">خانه</a> </li>
-                                <li><a href="Gallery.html">تصاویر من</a></li>
-                            </ul>
-                        </nav>
-                        <div class="tmp-header-right">
-                            <div class="social-share-wrapper d-none d-md-block">
-                                <div class="social-link"> <a href="https://instagram.com/bluestar110h"><i class="fa-brands fa-instagram"></i></a> <a href="https://t.me/bluestar110h"><i class="fa-brands fa-telegram"></i></a> <a href="https://wa.me/989151042127"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://eitaa.com/bluestar110h"><i class="fa-brands fa-discord"></i></a> <a href="mailto:hassan.saghebi@gmail.com?subject=Contact%20Request&body=Hello%20Hassan"><i class="fa-brands fa-google"></i></a> <a href="tel:+989151042127"><i class="fa-brands fa-viber"></i></a> </div>
-                            </div>
-                            <div class="actions-area">
-                                <div class="tmp-side-collups-area d-none d-xl-block"> <button class="tmp-menu-bars tmp_button_active"><i class="fa-regular fa-bars-staggered"></i></button> </div>
-                                <div class="tmp-side-collups-area d-block d-xl-none"> <button class="tmp-menu-bars humberger_menu_active"><i class="fa-regular fa-bars-staggered"></i></button> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+<body>
+<header>
+    <h1>سایت نمونه</h1>
+</header>
 
-    <div class="d-none d-xl-block">
-        <div class="tmp-sidebar-area tmp_side_bar">
-            <div class="inner">
-                <div class="top-area">
-                    <a class="logo" href="index.html"> <img alt="Reeni - Personal Portfolio HTML Template for developers and freelancers" class="logo-dark" src="assets/images/logo/white-logo-reeni.png"/> <img alt="Reeni - Personal Portfolio HTML Template for developers and freelancers" class="logo-white" src="assets/images/logo/logo-white.png"/> </a> 
-                    <div class="close-icon-area"> <button class="tmp-round-action-btn close_side_menu_active"> <i class="fa-sharp fa-light fa-xmark"></i> </button> </div>
-                </div>
-                <div class="content-wrapper">
-                    <div class="image-area-feature"> <a href="index.html"> <img alt="personal-logo" src="assets/images/logo/man.png"/> </a> </div>
-                    <h5 class="title mt--30">Freelancer ارائه راه حل های استثنایی Webflow ، و Next.js.</h5>
-                    <p class="disc">من یک فریلنسر ماهر متخصص در توسعه Webflow ، طراحی FIGMA و پروژه های بعدی هستم.من راه حل های وب خلاق ، پویا و کاربر محور را ارائه می دهم.</p>
-                    <div class="short-contact-area">
-                        <div class="single-contact">
-                            <i class="fa-solid fa-phone"></i> 
-                            <div class="information tmp-link-animation"> <span>اکنون تماس بگیرید</span> <a class="number" href="#">+92 (8800) - 98670</a> </div>
-                        </div>
-                        <div class="single-contact">
-                            <i class="fa-solid fa-envelope"></i> 
-                            <div class="information tmp-link-animation"> <span>به ما نامه ارسال کنید</span> <a class="number" href="#">به عنوان مثال@info.com</a> </div>
-                        </div>
-                        <div class="single-contact">
-                            <i class="fa-solid fa-location-crosshairs"></i> 
-                            <div class="information tmp-link-animation"> <span>آدرس من</span> <span class="number">ایران، شهر مشهد</span> </div>
-                        </div>
-                    </div>
-                    <div class="social-wrapper mt--20">
-                        <span class="subtitle">با من پیدا کن</span> 
-                        <div class="social-link"> <a href="https://instagram.com/bluestar110h"><i class="fa-brands fa-instagram"></i></a> <a href="https://t.me/bluestar110h"><i class="fa-brands fa-telegram"></i></a> <a href="https://wa.me/989151042127"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://eitaa.com/bluestar110h"><i class="fa-brands fa-discord"></i></a> <a href="mailto:hassan.saghebi@gmail.com?subject=Contact%20Request&body=Hello%20Hassan"><i class="fa-brands fa-google"></i></a> <a href="tel:+989151042127"><i class="fa-brands fa-viber"></i></a> </div>
-                    </div>
-                </div>
-            </div>
+<nav>
+    <ul>
+        <li><a href="#">خانه</a></li>
+        <li><a href="#">درباره ما</a></li>
+        <li><a href="#">تماس با ما</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <aside class="sidebar">
+        <h3>منوی کناری</h3>
+        <ul>
+            <li>گزینه اول</li>
+            <li>گزینه دوم</li
+<section class="main-content">
+    <h2>بخش دوم صفحه</h2>
+    <p class="rtl-text">
+        این متن فارسی مربوط به بخش دوم صفحه است و همانطور که می‌بینی همچنان راست‌چین باقی مانده است.
+    </p>
+
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div style="flex: 2; background: #eef; padding: 15px;">
+            <h3>عنوان باکس ۱</h3>
+            <p class="rtl-text">
+                محتوای فارسی باکس اول که باید راست به چپ نمایش داده شود.
+            </p>
         </div>
-        <a class="overlay_close_side_menu close_side_menu_active" href="javascript:void(0);"></a> 
-    </div>
-<section class="counter-area">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-12 col-lg-6 col-xl-6 col-xxl-6">
-                <div class="year-of-expariance-wrapper bg-blur-style-one tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    <div class="year-expariance-wrap">
-                        <h2 class="counter year-number"><span class="odometer" data-count="12">00</span> </h2>
-                        <h3 class="year-title"> سال<br/>تجربه</h3>
-                    </div>
-                    <p class="year-para">مشاوره بازرگانی، وارادت و صادرات و اجرای تورهای داخلی و خارجی</p>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-6 col-xxl-6">
-                <div class="counter-area-right-content">
-                    <div class="row g-5">
-                        <div class="col-lg-6 col-sm-6 col-12">
-                            <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
-                                <h3 class="counter counter-title"><span class="odometer" data-count="09">00</span>+هزار</h3>
-                                <p class="counter-para">تنوع محصول بازرگانی</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 col-12">
-                            <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
-                                <h3 class="counter counter-title"><span class="odometer" data-count="65">00</span>+</h3>
-                                <p class="counter-para">کشور مورد تجارت</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 col-12">
-                            <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
-                                <h3 class="counter counter-title">+<span class="odometer" data-count="305">00</span></h3>
-                                <p class="counter-para">مشتری رضایتمند</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 col-12">
-                            <div class="counter-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
-                                <h3 class="counter counter-title">+<span class="odometer" data-count="211">00</span></h3>
-                                <p class="counter-para">خدمت پس از فروش</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div style="flex: 3; background: #fee; padding: 15px;">
+            <h3>Box Title 2</h3>
+            <p>
+                This is the English content for box two. All English text is left-aligned.
+            </p>
         </div>
     </div>
-        <div class="row service-row" style="margin-top: 60px;">
-            <div class="col-lg-6">
-                    <div class="service-card-v2 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <h2 class="service-card-num"><span>01</span>سبد خلاقیت</h2>
-                        <p class="service-para">ارائه مشاوره تخصصی و راهنمایی برای واردات و صادرات کالا و خدمت شما با روش های نوین و خلاقانه</p>
-                    </div>
-                    <div class="service-card-v2 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
-                        <h2 class="service-card-num"><span>02</span>سبد تنوع خدمات</h2>
-                        <p class="service-para">ارائه خدمات بازرگانی عمده و جزء شامل یافتن کالا، سفارش، حواله ارزی، حمل و ترخیص</p>
-                    </div>
-                    <div class="service-card-v2 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
-                        <h2 class="service-card-num"><span>03</span>ویترین خدمات گردشگری</h2>
-                        <p class="service-para">اجرای تورهای نمایشگاهی، تجاری و تفریحی ترکیبی داخلی و خارجی با تنوع بالا و ساختار انعطاف پذیر.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="service-card-user-image"> <img alt="latest-user-image" class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="assets/images/services/latest-services-user-image-two.png"/> </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <div class="tmp-skill-area tmp-section-gapTop">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="progress-wrapper">
-                        <div class="content">
-                            <h2 class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">مهارت بازرگانی<span><img alt="custom-line" src="assets/images/custom-line/custom-line.png"/></span> </h2>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">سورسینگ (یافتن) کالا</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" class="progress-bar wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="0.5s" role="progressbar" style="width: 100%; visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInLeft;"> <span class="percent-label">100 ٪</span> </div>
-                                </div>
-                            </div>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">حواله ارزی</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" class="progress-bar wow fadeInLeft" data-wow-delay=".4s" data-wow-duration="0.6s" role="progressbar" style="width: 95%; visibility: visible; animation-duration: 0.6s; animation-delay: 0.4s; animation-name: fadeInLeft;"> <span class="percent-label">95 ٪</span> </div>
-                                </div>
-                            </div>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">حمل کالا</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar wow fadeInLeft" data-wow-delay=".5s" data-wow-duration="0.7s" role="progressbar" style="width: 85%; visibility: visible; animation-duration: 0.7s; animation-delay: 0.5s; animation-name: fadeInLeft;"> <span class="percent-label">85 ٪</span> </div>
-                                </div>
-                            </div>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">ترخیص کالا</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" class="progress-bar wow fadeInLeft" data-wow-delay=".6s" data-wow-duration="0.8s" role="progressbar" style="width: 65%; visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInLeft;"> <span class="percent-label">65 ٪</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="progress-wrapper">
-                        <div class="content">
-                            <h2 class="custom-title mb--30 tmp-scroll-trigger tmp-fade-in animation-order-1">زبان های خارجی<span><img alt="custom-line" src="assets/images/custom-line/custom-line.png"/></span> </h2>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">انگلیسی</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="0.5s" role="progressbar" style="width: 100%; visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeInLeft;"> <span class="percent-label">100 ٪</span> </div>
-                                </div>
-                            </div>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">چینی</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" class="progress-bar wow fadeInLeft" data-wow-delay=".4s" data-wow-duration="0.6s" role="progressbar" style="width: 65%; visibility: visible; animation-duration: 0.6s; animation-delay: 0.4s; animation-name: fadeInLeft;"> <span class="percent-label">65 ٪</span> </div>
-                                </div>
-                            </div>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">هندی</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar wow fadeInLeft" data-wow-delay=".5s" data-wow-duration="0.7s" role="progressbar" style="width: 85%; visibility: visible; animation-duration: 0.7s; animation-delay: 0.5s; animation-name: fadeInLeft;"> <span class="percent-label">85 ٪</span> </div>
-                                </div>
-                            </div>
-                            <div class="progress-charts">
-                                <h6 class="heading heading-h6">عربی</h6>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" class="progress-bar wow fadeInLeft" data-wow-delay=".6s" data-wow-duration="0.8s" role="progressbar" style="width: 70%; visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInLeft;"> <span class="percent-label">70 ٪</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <table>
+        <thead>
+            <tr>
+                <th>English Header 1</th>
+                <th class="rtl-text">سرفصل فارسی ۲</th>
+                <th>English Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>English Cell 1</td>
+                <td class="rtl-text">سلول فارسی ۲</td>
+                <td>English Cell 3</td>
+            </tr>
+            <tr>
+                <td>English Cell 4</td>
+                <td class="rtl-text">سلول فارسی ۵</td>
+                <td>English Cell 6</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section class="additional-info">
+    <h2>Additional Information / اطلاعات بیشتر</h2>
+
+    <article style="margin-bottom: 20px;">
+        <h3>Summary / خلاصه</h3>
+        <p class="rtl-text">
+            این پاراگراف فارسی توضیحاتی درباره‌ی بخش سوم سایت است که باید راست‌چین بماند و خوانایی فارسی حفظ شود.
+        </p>
+        <p>
+            Here is the English summary explaining this section clearly for English readers.
+        </p>
+    </article>
+
+    <article>
+        <h3>Contact Details / جزئیات تماس</h3>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><strong>Phone / تلفن:</strong> <span dir="ltr">+98 21 1234 5678</span></li>
+            <li><strong>Email / ایمیل:</strong> <span dir="ltr">info@example.com</span></li>
+            <li><strong>Address / آدرس:</strong> <span class="rtl-text">تهران، خیابان ولیعصر، پلاک ۱۲۳</span></li>
+        </ul>
+    </article>
+</section>
+<footer style="direction: ltr; text-align: left; padding: 20px; background-color: #f2f2f2; margin-top: 40px;">
+    <div style="max-width: 1200px; margin: auto;">
+        <p style="margin: 0;">
+            &copy; 2025 Your Company Name. All rights reserved.
+        </p>
+        <nav>
+            <ul style="list-style: none; padding-left: 0; display: flex; gap: 15px;">
+                <li><a href="#home" style="text-decoration: none; color: #333;">Home</a></li>
+                <li><a href="#about" style="text-decoration: none; color: #333;">About Us</a></li>
+                <li><a href="#services" style="text-decoration: none; color: #333;">Services</a></li>
+                <li><a href="#contact" style="text-decoration: none; color: #333;">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <section class="education-experience tmp-section-gapTop">
-        <div class="container">
-            <h2 class="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">مدارک و سوابق اجرایی<span><img alt="custom-line" src="assets/images/custom-line/custom-line.png"/></span> </h2>
-            <div class="row g-5">
-                <div class="col-lg-6 col-sm-6">
-                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <h4 class="edu-sub-title">مقالات چاپ شده</h4>
-                        <h2 class="edu-title">1391-1403</h2>
-                        <p class="edu-para">تحقیق، ارائه و چاپ بیش از یازده مقاله علمی در زمینه های مدیریت گروهی، بازرگانی و صنعت گردشگری در پایگاه های علمی و سیویلیکا.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
-                        <h4 class="edu-sub-title">راهنمای رسمی گردشگری</h4>
-                        <h2 class="edu-title">1397-1404</h2>
-                        <p class="edu-para">دارای مجوز رسمی راهنمای تور داخلی و خارجی از وزرات میراث فرهنگی و گردشگری و عضو انجمن گردشگری.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
-                        <h4 class="edu-sub-title">مجوز رسمی تجارت</h4>
-                        <h2 class="edu-title">1395-1404</h2>
-                        <p class="edu-para">عضو اتاق بازرگانی ایران و دارای مجوز رسمی بازرگانی از وزرات صنعت معدن و تجارت.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
-                        <h4 class="edu-sub-title">تدریس دانشگاهی</h4>
-                        <h2 class="edu-title">1381-1400</h2>
-                        <p class="edu-para">تدریس زبان های خارجی و متون بازرگانی در دانشگاه فردوسی مشهد، دانشکده پزشگی گناباد و دانشگاه آزاد گناباد.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="about-me">
-            <h2> </h2>
-    </section>
-
-    <section class="latest-service-area tmp-section-gapTop">
-        <div class="container">
-            <div class="section-head mb--60">
-            <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1"> <span class="subtitle">درباره سید حسن</span> </div>
-            <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">معرفی مختصر سید حسن ثاقبی</h2>
-            <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">سید حسن ثاقبی، فردی متخص و باتجربه در زمینه تجارت بین‌الملل، گردشگری و تأمین کالا می باشد که گستره فعالیت او کشورهای ایران، چین، روسیه، اروپا، آمریکا و خاورمیانه را در بر می گیرد. ارائه راه‌حل‌های استراتژیک و اثربخش، در حوزه B2B و B2C از جمله توانایی های وی می باشد.
-سفر به ۶۳ کشور مختلف زمینه درک عمیقی از بازارها، فرهنگ‌ها و شیوه‌های تجاری جهانی را برای وی فراهم آورده است. حوزه کاری او شامل واردات و صادرات، لجستیک، بازار ارز و پرداخت‌های بین‌المللی می باشد. سابقه ی غنی از یک سو و رضایت مشتریان از سویی دیگر، حاکی از همکاری های موفق ایشان می باشد<br> 
-تسلط به زبان های انگلیسی، فارسی، هندی، عربی و چینی، زمینه ارتباط مؤثر  با مشتریان از ملیت‌های مختلف را برای وی فراهم آورده است. ضمن اینکه عضو هیئت مدیریه شرکت بازرگانی ایجت می باشد، اغلب به‌صورت مستقل فعالیت می‌کند تا ارتباط مستقیم و انعطاف‌پذیری بیشتری با مشتریان داشته باشد<br> 
-وی دارای مدارک مدیریت بازرگانی و  مدیریت شهری می باشد و دانش دانشگاهی را با تجربه‌ی میدانی ترکیب کرده است. اعتبار او بر پایه اطمینان پذیری، تخصص بالا و نگرش راهبردی، بنا شده و همین ویژگی ها، او را به گزینه‌ای ممتاز در عرصه تجارت جهانی و تأمین کالا تبدیل کرده اند<br>  </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="latest-service-area tmp-section-gapTop">
-        <div class="container">
-            <div class="section-head mb--60">
-                <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1"> <span class="subtitle">سوابق کاری</span> </div>
-                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">سوابق کاری سید حسن ثاقبی و مشتریان رضایتمند</h2>
-                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">1382 الی 1384: شرکت ساختمانی پرلیکا: سمت: مدیریت اجرایی<br> 1395 تا به امروز: شرکت پردازش اطلاعات مالی پارت: سمت: مدیر بازرگانی<br> 1396 تا به امروز: مرکز ارگانیک تندرستان: سهامدار عمده و مدیریت<br> و بسیاری مورد های قراردادی با شرکت ها و مراکز گوناگون<br> <br> برخی از مشتریان و شرکت ها که از خدمات او رضایت کامل داشتند:<br> شرکت پردازش اطلاعات مالی پارت, دانشگاه فردوسی مشهد, دانشگاه آزاد  گناباد, شرکت ساختمانی حسینی،  دانشکده پزشکی گناباد, مرکز تندرستان, صنایع تولیدی شتابی, شرکت بازرگانی ایجت, شرکت تجارت فناوری شاهین کیش, کمپانی عقاب و بسیاری دیگر<br> </p>
-            </div>
-    </section>
-<div class="tpm-custom-box-bg">
-    <div class="latest-portfolio-area custom-column-grid">
-        <div class="container">
-            <div class="section-head mb--60">
-                <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1"> <span class="subtitle">آخرین فعالیت اجرایی</span> </div>
-                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">راه اندازی فروشگاه اینترنتی محصولات و خدمات بازرگانی</h2>
-                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3"> فروشگاه اینترنتی ایجت (EJet) راه اندازی گردید تا خدمات و کالا به صورت آنلاین در معرض مشتریان باشد</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <div class="portfoli-card-img">
-                            <div class="img-box v2"> <a href="#"> <img alt="Blog Thumbnail" class="img-primary hidden-on-mobile" src="assets/images/latest-portfolio/portfoli-img-1.jpg"/> <img alt="BLog Thumbnail" class="img-secondary" src="assets/images/latest-portfolio/portfoli-img-1.jpg"/> </a> </div>
-                        </div>
-                        <div class="portfolio-card-content-wrap">
-                            <div class="content-left">
-                                <h3 class="portfolio-card-title"><a class="link" href="#">نظر آکشای از هند</a> </h3>
-                                <p class="portfoli-card-para">اینفلونسر فعال در زمینه گردشگری</p>
-                            </div>
-                            <a class="tmp-arrow-icon-btn" href="#">
-                                <div class="btn-inner"> <i class="tmp-icon fa-solid fa-arrow-up-left"></i> <i class="tmp-icon-bottom fa-solid fa-arrow-up-left"></i> </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="latest-portfolio-card mt--100 mt_sm--0 mt_md--50 tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <div class="portfoli-card-img">
-                            <div class="img-box v2"> <a href="#"> <img alt="Blog Thumbnail" class="img-primary hidden-on-mobile" src="assets/images/latest-portfolio/portfoli-img-2.jpg"/> <img alt="BLog Thumbnail" class="img-secondary" src="assets/images/latest-portfolio/portfoli-img-2.jpg"/> </a> </div>
-                        </div>
-                        <div class="portfolio-card-content-wrap">
-                            <div class="content-left">
-                                <h3 class="portfolio-card-title"><a class="link" href="#">نظر شیمجیث از هلند</a></h3>
-                                <p class="portfoli-card-para">مدیر اجرایی شرکت نفتی شل</p>
-                            </div>
-                            <a class="tmp-arrow-icon-btn" href="#">
-                                <div class="btn-inner"> <i class="tmp-icon fa-solid fa-arrow-up-left"></i> <i class="tmp-icon-bottom fa-solid fa-arrow-up-left"></i> </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="latest-portfolio-card tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <div class="portfoli-card-img">
-                            <div class="img-box v2"> <a href="#"> <img alt="Blog Thumbnail" class="img-primary hidden-on-mobile" src="assets/images/latest-portfolio/portfoli-img-3.jpg"/> <img alt="BLog Thumbnail" class="img-secondary" src="assets/images/latest-portfolio/portfoli-img-3.jpg"/> </a> </div>
-                        </div>
-                        <div class="portfolio-card-content-wrap">
-                            <div class="content-left">
-                                <h3 class="portfolio-card-title"><a class="link" href="#">نظر فرخ مصطفی از آمریکا</a> </h3>
-                                <p class="portfoli-card-para">مدیر بازاریابی شرکت فرخ</p>
-                            </div>
-                            <a class="tmp-arrow-icon-btn" href="#">
-                                <div class="btn-inner"> <i class="tmp-icon fa-solid fa-arrow-up-left"></i> <i class="tmp-icon-bottom fa-solid fa-arrow-up-left"></i> </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="latest-portfolio-card mt--100 mt_sm--0 mt_md--50 tmp-hover-link tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <div class="portfoli-card-img">
-                            <div class="img-box v2"> <a href="#"> <img alt="Blog Thumbnail" class="img-primary hidden-on-mobile" src="assets/images/latest-portfolio/portfoli-img-4.jpg"/> <img alt="BLog Thumbnail" class="img-secondary" src="assets/images/latest-portfolio/portfoli-img-4.jpg"/> </a> </div>
-                        </div>
-                        <div class="portfolio-card-content-wrap">
-                            <div class="content-left">
-                                <h3 class="portfolio-card-title"><a class="link" href="#">نظر تارسی از آمریکا</a> </h3>
-                                <p class="portfoli-card-para">مدیر میانی ایر بی ان بی نیویورک</p>
-                            </div>
-                            <a class="tmp-arrow-icon-btn" href="#">
-                                <div class="btn-inner"> <i class="tmp-icon fa-solid fa-arrow-up-left"></i> <i class="tmp-icon-bottom fa-solid fa-arrow-up-left"></i> </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="my-skill tmp-section-gapTop">
-        <div class="container">
-            <div class="section-head text-align-left mb--60">
-                <div class="section-sub-title tmp-scroll-trigger tmp-fade-in animation-order-1"> <span class="subtitle">مهارت من</span> </div>
-                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">سوابق تحصیلات دانشگاهی<br/>
-            </div>
-            <div class="services-widget v1">
-                <div class="service-item current tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    <div class="my-skill-card">
-                        <div class="card-icon"> <i class="fa-light fa-building-columns"></i> </div>
-                        <div class="card-title">
-                            <h3 class="main-title">کارشناسی مهندسی صنایع</h3>
-                            <p class="sub-title">21</p>
-                        </div>
-                        <p class="card-para">سال 1382 رشته مهندسی صنایع را در دانشگاه صنعتی شاهرود شروع کرد و سپس برای اتمام دوره سال 1385 به دانشگاه سجاد مشهد منتقل شد</p>
-                        <a class="read-more-btn" href="#"> <span class="read-more-icon"><i class="fa-solid fa-angle-left"></i></span></a> 
-                    </div>
-                    <button class="service-link modal-popup"></button> 
-                </div>
-                <div class="service-item tmp-scroll-trigger tmp-fade-in animation-order-2">
-                    <div class="my-skill-card">
-                        <div class="card-icon"> <i class="fa-light fa-calendar"></i> </div>
-                        <div class="card-title">
-                            <h3 class="main-title">کارشناسی مدیریت بازرگانی</h3>
-                            <p class="sub-title">21</p>
-                        </div>
-                        <p class="card-para">سال 1392 در موسسه آموزش عالی فردوس مشهد نسبت به تحصیل رشته مدیریت بازرگانی اقدام کرد که با رتبه ممتاز دانشگاه فارغ التحصیل گردید.</p>
-                        <a class="read-more-btn" href="#"> <span class="read-more-icon"><i class="fa-solid fa-angle-left"></i></span></a> 
-                    </div>
-                    <button class="service-link modal-popup"></button> 
-                </div>
-                <div class="service-item tmp-scroll-trigger tmp-fade-in animation-order-3">
-                    <div class="my-skill-card">
-                        <div class="card-icon"> <i class="fa-light fa-pen-nib"></i> </div>
-                        <div class="card-title">
-                            <h3 class="main-title">ارشد و دکتری رشته مدیریت شهری</h3>
-                            <p class="sub-title">20</p>
-                        </div>
-                        <p class="card-para">سال 1397 با استفاده از ظرفیت ممتاز در دانشگاه فردوسی مشهد مشغول به تحصیل گردید و نهایتا در سال 1402 تحصیلات خود را به پایان رسانید.</p>
-                        <a class="read-more-btn" href="#"> <span class="read-more-icon"><i class="fa-solid fa-angle-left"></i></span></a> 
-                    </div>
-                    <button class="service-link modal-popup"></button> 
-                </div>
-                <div class="active-bg wow fadeInUp mleave"></div>
-            </div>
-        </div>
-    </section>
-</div>
-        <footer class="footer-area footer-style-one-wrapper tmp-section-gap">
-            <div class="container">
-                <div class="footer-main footer-style-one">
-                    <div class="row g-5">
-                        <div class="col-lg-5 col-md-6">
-                            <div class="single-footer-wrapper border-right mr--20">
-                                <div class="logo"> <a href="index.html"> <img alt="Reeni - Personal Portfolio HTML Template for developers and freelancers" src="assets/images/logo/white-logo-reeni-2.png"/> </a> </div>
-                                <p class="description"><span> همکاری با ما </span><br/>پلی به سوی</span><br/>فردایی روشن تر</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-footer-wrapper quick-link-wrap">
-                                <h5 class="ft-title"> </h5>
-                                <ul class="ft-link tmp-link-animation">
-                                    <li> <a href="#"> </a> </li>
-                                    <li> <a href="#"> </a> </li>
-                                    <li> <a href="#"> </a> </li>
-                                    <li> <a href="#"> </a> </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-footer-wrapper contact-wrap">
-                                <h5 class="ft-title">تماس</h5>
-                                <ul class="ft-link tmp-link-animation">
-                                    <li><span class="ft-icon"><i class="fa-solid fa-envelope"></i></span><a href="mailto:hassan.saghebi@gmail.com">Hassan.Saghebi@Gmail.com</a></li>
-                                    <li><span class="ft-icon"><i class="fa-solid fa-location-dot"></i></span>کشور ایران، شهر مشهد</li>
-                                    <li><span class="ft-icon"><i class="fa-solid fa-phone"></i></span><a href="tell:+989151042127">989151042127+</a></li>
-                                </ul>
-                                <div class="social-link footer"> <a href="https://instagram.com/bluestar110h"><i class="fa-brands fa-instagram"></i></a> <a href="https://t.me/bluestar110h"><i class="fa-brands fa-telegram"></i></a> <a href="https://wa.me/989151042127"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://eitaa.com/bluestar110h"><i class="fa-brands fa-discord"></i></a> <a href="mailto:hassan.saghebi@gmail.com?subject=Contact%20Request&body=Hello%20Hassan"><i class="fa-brands fa-google"></i></a>  </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bg-img"> <img alt="footer-img" src="assets/images/footer/footer-bg-img.png"/> </div>
-        </footer>
-
-        <div class="copyright-area-one">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main-wrapper">
-                            <p class="copy-right-para">
-                                © SHS<script> document.write(new Date().getFullYear()) </script> | کلیه حقوق محفوظ است
-                            </p>
-                            <ul>
-                                <li><a href="contact.html">با ما تماس بگیرید</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="scrollToTop" style="display: block;">
-            <div class="arrowUp"> <i class="fa-light fa-arrow-up"></i> </div>
-            <div class="water" style="transform: translate(0px, 87%);">
-                <svg class="water_wave water_wave_back" viewbox="0 0 560 20">
-                    <use xlink:href="#wave"></use>
-                </svg>
-                <svg class="water_wave water_wave_front" viewbox="0 0 560 20">
-                    <use xlink:href="#wave"></use>
-                </svg>
-                <svg style="display: none;" version="1.1" viewbox="0 0 560 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <symbol id="wave">
-                        <path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z" fill="#FF014F"></path>
-                        <path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z" fill="#FF014F"></path>
-                        <path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z" fill="#FF014F"></path>
-                        <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z" fill="#FF014F"></path>
-                    </symbol>
-                </svg>
-            </div>
-        </div>
-        
-        <script src="assets/js/vendor/jquery.js"></script>
-        <script src="assets/js/vendor/jquery-ui.min.js"></script>
-        <script src="assets/js/vendor/waypoints.min.js"></script>
-        <script src="assets/js/plugins/odometer.js"></script>
-        <script src="assets/js/vendor/appear.js"></script>
-        <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
-        <script src="assets/js/plugins/swiper.js"></script>
-        <script src="assets/js/plugins/gsap.js"></script>
-        <script src="assets/js/plugins/splittext.js"></script>
-        <script src="assets/js/plugins/scrolltigger.js"></script>
-        <script src="assets/js/plugins/scrolltoplugins.js"></script>
-        <script src="assets/js/plugins/smoothscroll.js"></script>
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
-        <script src="assets/js/vendor/waw.js"></script>
-        <script src="assets/js/plugins/isotop.js"></script>
-        <script src="assets/js/plugins/animation.js"></script>
-        <script src="assets/js/plugins/contact.form.js"></script>
-        <script src="assets/js/vendor/backtop.js"></script>
-        <script src="assets/js/plugins/text-type.js"></script>
-        <script src="assets/js/main.js"></script> 
-    </body>
-</html>
+</footer>
+<script>
+// Example: Smooth scroll for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
