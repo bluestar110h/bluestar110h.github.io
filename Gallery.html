@@ -33,7 +33,7 @@
 
     .my-gallery-section h1 {
       color: #e50914;
-      margin-bottom: 40px;
+      margin: 80px 0 40px 0;
       font-size: 32px;
     }
 
@@ -52,26 +52,53 @@
       margin: auto;
     }
 
-    .horizontal img, .vertical img {
-      width: 100%;
+    .img-container {
+      position: relative;
+      overflow: hidden;
       border-radius: 10px;
+    }
+
+    .horizontal .img-container img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
       cursor: pointer;
       transition: 0.3s ease;
       box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
     }
 
-    .horizontal img {
-      height: 250px;
+    .vertical .img-container img {
+      width: 100%;
+      height: 500px;
       object-fit: cover;
-    }
-
-    .vertical img {
-      max-height: 500px;
-      object-fit: contain;
       background-color: #111;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
     }
 
-    .gallery img:hover {
+    .img-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .img-container:hover .img-caption {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .img-container:hover img {
       transform: scale(1.03);
       box-shadow: 0 0 15px rgba(229, 9, 20, 0.7);
     }
@@ -115,8 +142,7 @@
   </style>
 </head>
 <body class="color-primary-2nd">
-
-  <!-- Header -->
+<!-- Header -->
   <header class="tmp-header-area-start header-one header--sticky header--transparent">
     <div class="container">
       <div class="row">
@@ -126,7 +152,7 @@
               <a href="index.html">
                 <img class="logo-dark" src="assets/images/logo/white-logo-reeni-2.png" alt="لوگو" />
                 <img class="logo-white" src="assets/images/logo/logo-white.png" alt="لوگو سفید" />
-              </a>
+</a>
             </div>
             <nav class="tmp-mainmenu-nav d-none d-xl-block">
               <ul class="tmp-mainmenu">
@@ -139,7 +165,7 @@
             <div class="tmp-header-right">
               <div class="social-share-wrapper d-none d-md-block">
                 <div class="social-link">
-<a href="https://instagram.com/bluestar110h"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://instagram.com/bluestar110h"><i class="fa-brands fa-instagram"></i></a>
                   <a href="https://t.me/bluestar110h"><i class="fa-brands fa-telegram"></i></a>
                   <a href="https://wa.me/989151042127"><i class="fa-brands fa-whatsapp"></i></a>
                   <a href="https://eitaa.com/bluestar110h"><i class="fa-brands fa-discord"></i></a>
@@ -164,36 +190,90 @@
 
   <!-- گالری -->
   <section class="my-gallery-section">
-    
-    
     <h1>تصاویر من</h1>
 
-    <h2>عکس‌های افقی</h2>
     <div class="gallery horizontal">
-      <img src="photos/Me01.jpg" alt="Me Horizontal 01">
-      <img src="photos/Me02.jpg" alt="Me Horizontal 02">
-      <img src="photos/Me03.jpg" alt="Me Horizontal 03">
-      <img src="photos/Me11.jpg" alt="Me Horizontal 04">
-      <img src="photos/Me17.jpg" alt="Me Horizontal 05">
-      <img src="photos/Me19.jpg" alt="Me Horizontal 05">
-    </div>
+      <div class="img-container">
+        <img src="photos/Me01.jpg" alt="Me Horizontal 01">
+        <div class="img-caption">Me Horizontal 01</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me02.jpg" alt="Me Horizontal 02">
+        <div class="img-caption">Me Horizontal 02</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me03.jpg" alt="Me Horizontal 03">
+        <div class="img-caption">Me Horizontal 03</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me11.jpg" alt="Me Horizontal 04">
+        <div class="img-caption">Me Horizontal 04</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me17.jpg" alt="Me Horizontal 05">
+        <div class="img-caption">Me Horizontal 05</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me19.jpg" alt="Me Horizontal 06">
+        <div class="img-caption">Me Horizontal 06</div>
 
-    <h2>عکس‌های عمودی</h2>
     <div class="gallery vertical">
-      <img src="photos/Me04.jpg" alt="Me Vertical 01">
-      <img src="photos/Me05.jpg" alt="Me Vertical 02">
-      <img src="photos/Me06.jpg" alt="Me Vertical 03">
-      <img src="photos/Me07.jpg" alt="Me Vertical 04">
-      <img src="photos/Me08.jpg" alt="Me Vertical 05">
-      <img src="photos/Me09.jpg" alt="Me Vertical 06">
-      <img src="photos/Me10.jpg" alt="Me Vertical 07">
-      <img src="photos/Me12.jpg" alt="Me Vertical 08">
-      <img src="photos/Me13.jpg" alt="Me Vertical 09">
-      <img src="photos/Me14.jpg" alt="Me Vertical 10">
-      <img src="photos/Me15.jpg" alt="Me Vertical 11">
-      <img src="photos/Me16.jpg" alt="Me Vertical 12">
-      <img src="photos/Me18.jpg" alt="Me Vertical 13">
-      <img src="photos/Me20.jpg" alt="Me Vertical 13">
+      <div class="img-container">
+        <img src="photos/Me04.jpg" alt="Me Vertical 01">
+        <div class="img-caption">Me Vertical 01</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me05.jpg" alt="Me Vertical 02">
+        <div class="img-caption">Me Vertical 02</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me06.jpg" alt="Me Vertical 03">
+        <div class="img-caption">Me Vertical 03</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me07.jpg" alt="Me Vertical 04">
+        <div class="img-caption">Me Vertical 04</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me08.jpg" alt="Me Vertical 05">
+        <div class="img-caption">Me Vertical 05</div>
+      </div>
+      <div class="img-container">
+<img src="photos/Me09.jpg" alt="Me Vertical 06">
+        <div class="img-caption">Me Vertical 06</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me10.jpg" alt="Me Vertical 07">
+        <div class="img-caption">Me Vertical 07</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me12.jpg" alt="Me Vertical 08">
+        <div class="img-caption">Me Vertical 08</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me13.jpg" alt="Me Vertical 09">
+        <div class="img-caption">Me Vertical 09</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me14.jpg" alt="Me Vertical 10">
+        <div class="img-caption">Me Vertical 10</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me15.jpg" alt="Me Vertical 11">
+        <div class="img-caption">Me Vertical 11</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me16.jpg" alt="Me Vertical 12">
+        <div class="img-caption">Me Vertical 12</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me18.jpg" alt="Me Vertical 13">
+        <div class="img-caption">Me Vertical 13</div>
+      </div>
+      <div class="img-container">
+        <img src="photos/Me20.jpg" alt="Me Vertical 14">
+        <div class="img-caption">Me Vertical 14</div>
+      </div>
     </div>
   </section>
 
@@ -208,7 +288,7 @@
     const lightboxImg = document.getElementById('lightbox-img');
     const images = document.querySelectorAll('.gallery img');
     const close = document.querySelector('.close');
-
+    
     images.forEach(img => {
       img.addEventListener('click', () => {
         lightbox.style.display = 'block';
@@ -224,6 +304,7 @@
   </script>
 </body>
 </html>
+
 
 </html>
     </div>
