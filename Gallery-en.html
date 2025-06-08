@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+  <style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* دو ستون پیش‌فرض */
+    gap: 20px;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .img-caption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  /* فقط برای موبایل: یک ستون */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
