@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://hassan.id.ir/sitemap.xml
